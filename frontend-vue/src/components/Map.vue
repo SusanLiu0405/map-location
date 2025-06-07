@@ -24,6 +24,9 @@ const props = defineProps({
 
 const mapRef = ref(null)
 
+// Event Listener:
+// when the center has been updated, update the map center
+// and zoom in
 watch(() => props.center, (newCenter) => {
   if (mapRef.value?.mapObject) {
     mapRef.value.mapObject.panTo(newCenter)
