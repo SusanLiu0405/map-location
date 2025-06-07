@@ -15,6 +15,8 @@ const emit = defineEmits(['location-selected'])
 const inputText = ref('')
 const stateOptions = ref([])
 
+// send graphQL query to Apollo Server
+// get stateOptions: containing statename, latitude, longitude
 const onSearch = async (keyword) => {
     if (!keyword) {
         stateOptions.value = []
@@ -42,6 +44,7 @@ const onSearch = async (keyword) => {
     stateOptions.value = result.data.states
 }
 
+// bold the matched characters in the input textbox
 const stateOptionsBoldedChars = computed(() => {
     if (!inputText.value) return []
     const safeKeyword = inputText.value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
@@ -53,6 +56,9 @@ const stateOptionsBoldedChars = computed(() => {
     }))
 })
 
+// when user selected an option
+// emit the 'area-selected' event to the Input component
+// updateCenter will help to update the new center and zoom in
 function handleSelect(stateName) {
     const selected = stateOptions.value.find((s) => s.name === stateName)
     if (selected) {
