@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-nvm use 20.14.0
+# nvm use 20.14.0
 
 echo "Now trying to run MongoDB container"
 cd database-mongodb

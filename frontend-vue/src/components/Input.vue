@@ -10,7 +10,6 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-const emit = defineEmits(['location-selected'])
 
 const inputText = ref('')
 const stateOptions = ref([])
@@ -44,6 +43,7 @@ const onSearch = async (keyword) => {
     stateOptions.value = result.data.states
 }
 
+// fill the options in the dropdown
 // bold the matched characters in the input textbox
 const stateOptionsBoldedChars = computed(() => {
     if (!inputText.value) return []
