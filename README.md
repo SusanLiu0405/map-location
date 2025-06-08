@@ -1,13 +1,18 @@
 #### Dependencies:
 
 ```bash
-node -v # 24.1.0
+node -v # 20.14.0
 nvm -v  # 0.39.0
 ```
 
 All scripts in this project are intended to be run in a bash shell or a z-shell. Make sure you have these versions of Node.js and nvm installed before installing dependencies for the frontend, backend and Docker.
 
-After installing all dependencies, you can start all services by running `./start.sh` in the root directory of this repository. If any of the services fail to start, refer to the following guides to run them manually. 
+After installing all dependencies, you can start all services by running:
+```bash
+nvm use 20.14.0
+./start.sh
+```
+in the root directory of this repository. If any of the services fail to start, refer to the following guides to run them manually. 
 
 Instructions for stopping the services are also included below.
 
