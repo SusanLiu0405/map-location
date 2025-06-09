@@ -1,8 +1,6 @@
-#### Architecture Overview
+### System Components
 
-##### System Components
-
-1. ###### Frontend: Vue.js
+1. #### Frontend: Vue.js
 
    **Contains 3 components:**
 
@@ -29,7 +27,7 @@
 
    
 
-2. ###### Backend: Node.js
+2. #### Backend: Node.js
 
    **Apollo Server**
 
@@ -76,7 +74,7 @@
 
    
 
-3. ###### Database: MongoDB
+3. #### Database: MongoDB
 
    The database stores data about US states and territories in the `us-options` database. The `states` collection contains the following fields for each state:
    - name: The state or territory name
