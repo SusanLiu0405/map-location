@@ -13,6 +13,7 @@ import { ref, computed } from 'vue'
 
 const inputText = ref('')
 const stateOptions = ref([])
+const emit = defineEmits(['area-selected'])
 
 // send graphQL query to Apollo Server
 // get stateOptions: containing statename, latitude, longitude
